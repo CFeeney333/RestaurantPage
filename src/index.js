@@ -17,29 +17,21 @@ function createHeader() {
     const navList = document.createElement("div");
     navList.classList.add("tabList");
 
-    const homeTab = document.createElement("div");
-    homeTab.id = 'home';
-    homeTab.classList.add("tab");
-    homeTab.textContent = "HOME";
-    homeTab.addEventListener('click', onTabClick);
-    navList.appendChild(homeTab);
-
-    const menuTab = document.createElement("div");
-    menuTab.id = 'menu';
-    menuTab.classList.add("tab");
-    menuTab.textContent = "MENU";
-    menuTab.addEventListener('click', onTabClick);
-    navList.appendChild(menuTab);
-
-    const contactTab = document.createElement("div");
-    contactTab.id = 'contact';
-    contactTab.classList.add("tab");
-    contactTab.textContent = "CONTACT";
-    contactTab.addEventListener('click', onTabClick);
-    navList.appendChild(contactTab);
+    navList.appendChild(createTabItem('HOME', 'home'));
+    navList.appendChild(createTabItem('MENU', 'menu'));
+    navList.appendChild(createTabItem('CONTACT', 'contact'));
 
     container.appendChild(navList);
     return container;
+}
+
+function createTabItem(text, id) {
+    const tab = document.createElement("div");
+    tab.id = id;
+    tab.classList.add('tab');
+    tab.textContent = text;
+    tab.addEventListener('click', onTabClick);
+    return tab;
 }
 
 function clearContent() {
