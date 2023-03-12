@@ -14,23 +14,24 @@ function loadPage() {
 
 function createHeader() {
     const container = document.createElement("div");
-    const navList = document.createElement("ul");
+    const navList = document.createElement("div");
+    navList.classList.add("tabList");
 
-    const homeTab = document.createElement("li");
+    const homeTab = document.createElement("div");
     homeTab.id = 'home';
     homeTab.classList.add("tab");
     homeTab.textContent = "HOME";
     homeTab.addEventListener('click', onTabClick);
     navList.appendChild(homeTab);
 
-    const menuTab = document.createElement("li");
+    const menuTab = document.createElement("div");
     menuTab.id = 'menu';
     menuTab.classList.add("tab");
     menuTab.textContent = "MENU";
     menuTab.addEventListener('click', onTabClick);
     navList.appendChild(menuTab);
 
-    const contactTab = document.createElement("li");
+    const contactTab = document.createElement("div");
     contactTab.id = 'contact';
     contactTab.classList.add("tab");
     contactTab.textContent = "CONTACT";
