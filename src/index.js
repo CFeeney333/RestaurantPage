@@ -2,7 +2,15 @@ import {createHome} from "./home";
 import {createMenu} from "./menu";
 import {createContact} from "./contact";
 
-const content = document.createElement("div");
+const mainContent = document.createElement("div");
+loadPage();
+
+function loadPage() {
+    const page = document.querySelector('#content');
+    page.appendChild(createHeader());
+    page.appendChild(mainContent);
+    mainContent.appendChild(createHome());
+}
 
 function createHeader() {
     const container = document.createElement("div");
@@ -33,43 +41,21 @@ function createHeader() {
     return container;
 }
 
+function clearContent() {
+    while (mainContent.firstChild) {
+        mainContent.removeChild(mainContent.firstChild);
+    }
+}
+
+// EVENT HANDLERS
 function onTabClick(e) {
+    clearContent();
     const id = e.target.id;
     if (id === 'home') {
-        loadHome();
+        mainContent.appendChild(createHome());
     } else if (id === 'menu') {
-        loadMenu();
+        mainContent.appendChild(createMenu());
     } else if (id === 'contact') {
-        loadContact();
+        mainContent.appendChild(createContact());
     }
 }
-
-function loadHome() {
-    clearContent();
-    content.appendChild(createHome());
-}
-
-function loadMenu() {
-    clearContent();
-    content.appendChild(createMenu());
-}
-
-function loadContact() {
-    clearContent();
-    content.appendChild(createContact());
-}
-
-function clearContent() {
-    while (content.firstChild) {
-        content.removeChild(content.firstChild);
-    }
-}
-
-function loadPage() {
-    const page = document.querySelector('#content');
-    page.appendChild(createHeader());
-    page.appendChild(content);
-    loadHome();
-}
-
-loadPage();
