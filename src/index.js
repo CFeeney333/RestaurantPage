@@ -25,8 +25,9 @@ function createHeader() {
     const tabItems = [createTabItem('HOME', 'home'),
         createTabItem('MENU', 'menu'),
         createTabItem('CONTACT', 'contact')];
-    tabItems.forEach((elem) => container.appendChild(elem));
+    tabItems.forEach((elem) => navList.appendChild(elem));
 
+    container.appendChild(navList);
     return container;
 }
 
