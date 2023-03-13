@@ -4,6 +4,13 @@ import {loadContact} from "./contact";
 
 const mainContent = document.createElement("div");
 mainContent.classList.add("main-content");
+
+const tabItems = {
+    'home': createTabItem('HOME', 'home'),
+    'menu': createTabItem('MENU', 'menu'),
+    'contact': createTabItem('CONTACT', 'contact')
+}
+
 let home, menu, contact;
 loadPage();
 
@@ -17,15 +24,23 @@ function loadPage() {
     mainContent.appendChild(home);
 }
 
+function makeActiveTab(tabItem) {
+    for (let item of Object.values(tabItems)) {
+        item.classList.remove('active');
+    }
+    tabItem.classList.add('active');
+}
+
 function createHeader() {
     const container = document.createElement("div");
     const navList = document.createElement("div");
     navList.classList.add("tab-list");
 
-    const tabItems = [createTabItem('HOME', 'home'),
-        createTabItem('MENU', 'menu'),
-        createTabItem('CONTACT', 'contact')];
-    tabItems.forEach((elem) => navList.appendChild(elem));
+    for (let elem of Object.values(tabItems)) {
+        navList.appendChild(elem);
+    }
+
+    makeActiveTab(tabItems['home']);
 
     container.appendChild(navList);
     return container;
@@ -67,5 +82,6 @@ function onTabClick(e) {
         }
         elem = contact;
     }
+    makeActiveTab(tabItems[id]);
     mainContent.appendChild(elem);
 }
