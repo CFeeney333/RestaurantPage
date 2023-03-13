@@ -1,27 +1,32 @@
-import {createHome} from "./home";
-import {createMenu} from "./menu";
-import {createContact} from "./contact";
+import {loadHome} from "./home";
+import {loadMenu} from "./menu";
+import {loadContact} from "./contact";
 
 const mainContent = document.createElement("div");
+mainContent.classList.add("main-content");
+let home, menu, contact;
 loadPage();
 
 function loadPage() {
     const page = document.querySelector('#content');
     page.appendChild(createHeader());
     page.appendChild(mainContent);
-    mainContent.appendChild(createHome());
+    if (!home) {
+        home = loadHome();
+    }
+    mainContent.appendChild(home);
 }
 
 function createHeader() {
     const container = document.createElement("div");
     const navList = document.createElement("div");
-    navList.classList.add("tabList");
+    navList.classList.add("tab-list");
 
-    navList.appendChild(createTabItem('HOME', 'home'));
-    navList.appendChild(createTabItem('MENU', 'menu'));
-    navList.appendChild(createTabItem('CONTACT', 'contact'));
+    const tabItems = [createTabItem('HOME', 'home'),
+        createTabItem('MENU', 'menu'),
+        createTabItem('CONTACT', 'contact')];
+    tabItems.forEach((elem) => container.appendChild(elem));
 
-    container.appendChild(navList);
     return container;
 }
 
@@ -44,11 +49,22 @@ function clearContent() {
 function onTabClick(e) {
     clearContent();
     const id = e.target.id;
+    let elem;
     if (id === 'home') {
-        mainContent.appendChild(createHome());
+        if (!home) {
+            home = loadHome();
+        }
+        elem = home;
     } else if (id === 'menu') {
-        mainContent.appendChild(createMenu());
+        if (!menu) {
+            menu = loadMenu();
+        }
+        elem = menu;
     } else if (id === 'contact') {
-        mainContent.appendChild(createContact());
+        if (!contact) {
+            contact = loadContact();
+        }
+        elem = contact;
     }
+    mainContent.appendChild(elem);
 }
