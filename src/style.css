@@ -8,6 +8,9 @@
 .tab {
     font-weight: bold;
     font-family: Arial, sans-serif;
+    outline: none;
+    border: none;
+    background-color: inherit;
 }
 
 .active {

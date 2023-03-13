@@ -47,7 +47,7 @@ function createHeader() {
 }
 
 function createTabItem(text, id) {
-    const tab = document.createElement("div");
+    const tab = document.createElement("button");
     tab.id = id;
     tab.classList.add('tab');
     tab.textContent = text;
