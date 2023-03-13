@@ -1,0 +1,15 @@
+.tab-list {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab {
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+.active {
+    text-decoration: underline;
+}
