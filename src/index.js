@@ -7,11 +7,16 @@ import {loadContact} from "./contact";
 const mainContent = document.createElement("div");
 mainContent.classList.add("main-content");
 
+// use constants for tab ids
+const HOME= 'home';
+const MENU= 'menu';
+const CONTACT= 'contact';
+
 // create an array of buttons that represent the tabs at the top of the page
 const tabItems = {
-    'home': createTabItem('HOME', 'home'),
-    'menu': createTabItem('MENU', 'menu'),
-    'contact': createTabItem('CONTACT', 'contact')
+    HOME : createTabItem('HOME', HOME),
+    MENU : createTabItem('MENU', MENU),
+    CONTACT: createTabItem('CONTACT', CONTACT)
 }
 
 // we will keep a reference to the home, menu and contact tab contents when they are created
@@ -99,18 +104,17 @@ function onTabClick(e) {
     clearContent(mainContent);
     const id = e.target.id;
     let elem;
-    // TODO: make tab ids constants
-    if (id === 'home') {
+    if (id === HOME) {
         if (!home) {
             home = loadHome();
         }
         elem = home;
-    } else if (id === 'menu') {
+    } else if (id === MENU) {
         if (!menu) {
             menu = loadMenu();
         }
         elem = menu;
-    } else if (id === 'contact') {
+    } else if (id === CONTACT) {
         if (!contact) {
             contact = loadContact();
         }
