@@ -32,6 +32,7 @@ function loadPage() {
     if (!home) {
         home = loadHome();
     }
+    makeActiveTab(tabItems['home']);
     mainContent.appendChild(home);
 }
 
@@ -58,8 +59,6 @@ function createHeader() {
     for (let elem of Object.values(tabItems)) {
         navList.appendChild(elem);
     }
-    // TODO: move makeActiveTab call to loadPage
-    makeActiveTab(tabItems['home']);
 
     container.appendChild(navList);
     return container;
