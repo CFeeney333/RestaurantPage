@@ -27,13 +27,15 @@ loadPage();
  */
 function loadPage() {
     const page = document.querySelector('#content');
-    page.appendChild(createHeader());
-    page.appendChild(mainContent);
     if (!home) {
         home = loadHome();
     }
     makeActiveTab(tabItems['home']);
+
     mainContent.appendChild(home);
+
+    page.appendChild(createHeader());
+    page.appendChild(mainContent);
 }
 
 /**
