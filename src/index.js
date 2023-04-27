@@ -14,9 +14,9 @@ const CONTACT= 'contact';
 
 // create an array of buttons that represent the tabs at the top of the page
 const tabItems = {
-    HOME : createTabItem('HOME', HOME),
-    MENU : createTabItem('MENU', MENU),
-    CONTACT: createTabItem('CONTACT', CONTACT)
+    'home' : createTabItem('HOME', HOME),
+    'menu' : createTabItem('MENU', MENU),
+    'contact' : createTabItem('CONTACT', CONTACT)
 }
 
 // we will keep a reference to the home, menu and contact tab contents when they are created
@@ -35,7 +35,7 @@ function loadPage() {
     if (!home) {
         home = loadHome();
     }
-    makeActiveTab(tabItems['home']);
+    makeActiveTab(tabItems[HOME]);
 
     mainContent.appendChild(home);
 
