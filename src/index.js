@@ -60,14 +60,21 @@ function makeActiveTab(tabItem) {
  */
 function createHeader() {
     const container = document.createElement("div");
+
+    // create the logo
+    const logo = document.createElement("img");
+    logo.src = "..\\images\\TurquesaJardimLogo.png";
+    logo.id = "logo";
+    container.appendChild(logo);
+
+    // create the navigation list of tabs
     const navList = document.createElement("div");
     navList.classList.add("tab-list");
-
     for (let elem of Object.values(tabItems)) {
         navList.appendChild(elem);
     }
-
     container.appendChild(navList);
+
     return container;
 }
 
