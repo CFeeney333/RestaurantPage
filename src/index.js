@@ -8,15 +8,15 @@ const mainContent = document.createElement("div");
 mainContent.classList.add("main-content");
 
 // use constants for tab ids
-const HOME= 'home';
-const MENU= 'menu';
-const CONTACT= 'contact';
+const HOME = 'home';
+const MENU = 'menu';
+const CONTACT = 'contact';
 
 // create an array of buttons that represent the tabs at the top of the page
 const tabItems = {
-    'home' : createTabItem('HOME', HOME),
-    'menu' : createTabItem('MENU', MENU),
-    'contact' : createTabItem('CONTACT', CONTACT)
+    'home': createTabItem('HOME', HOME),
+    'menu': createTabItem('MENU', MENU),
+    'contact': createTabItem('CONTACT', CONTACT)
 }
 
 // we will keep a reference to the home, menu and contact tab contents when they are created
@@ -34,6 +34,7 @@ function loadPage() {
     const page = document.querySelector('#content');
     if (!home) {
         home = loadHome();
+        addClass(home, "home-content");
     }
     makeActiveTab(tabItems[HOME]);
 
@@ -115,19 +116,28 @@ function onTabClick(e) {
     if (id === HOME) {
         if (!home) {
             home = loadHome();
+            addClass(home, "home-content");
         }
         elem = home;
     } else if (id === MENU) {
         if (!menu) {
             menu = loadMenu();
+            addClass(menu, "menu-content");
         }
         elem = menu;
     } else if (id === CONTACT) {
         if (!contact) {
             contact = loadContact();
+            addClass(contact, "contact-content");
         }
         elem = contact;
     }
     makeActiveTab(tabItems[id]);
     mainContent.appendChild(elem);
+}
+
+function addClass(elem, name) {
+    if (!elem.classList.contains(name)) {
+        elem.classList.add(name);
+    }
 }
