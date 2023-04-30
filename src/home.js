@@ -1,6 +1,13 @@
 function createHome() {
     const homeElement = document.createElement("div");
-    homeElement.textContent = "HOME CONTENT";
+
+    const img = document.createElement("img");
+    img.src = "..\\images\\TurquesaJardimLogo.png";
+    img.classList.add("center-logo");
+
+    homeElement.appendChild(img);
+
+    // homeElement.textContent = "HOME CONTENT";
     return homeElement;
 }
 
