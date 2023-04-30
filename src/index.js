@@ -74,6 +74,7 @@ function createHeader() {
         navList.appendChild(elem);
     }
     container.appendChild(navList);
+    container.classList.add("header");
 
     return container;
 }
