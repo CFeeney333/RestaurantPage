@@ -78,7 +78,6 @@ table {
     background-color: hsl(0, 100%, 100%, 75%);
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
     align-items: center;
     width: 70%;
     padding-top: 8em;
@@ -90,11 +89,7 @@ table {
 }
 
 #content {
-    /*background-image: url("../images/background.jpeg");*/
     height: 100vh;
-    /*background-size: 100%;*/
-    /*background-repeat: no-repeat;*/
-    /*background-position: center;*/
     display: flex;
     flex-direction: column;
     align-items: center;
