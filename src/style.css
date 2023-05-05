@@ -109,6 +109,7 @@ table {
     align-items: center;
     width: 100%;
     justify-content: center;
+    gap: 4em;
 }
 
 .home-content > .center-logo {
@@ -138,8 +139,7 @@ table {
     box-sizing: border-box;
     width: 90%;
     height: 0;
-    margin-top: 2em;
-    margin-bottom: 6em;
+    margin-top: -2em;
     border-bottom: 2px solid #04173d;
 }
 
