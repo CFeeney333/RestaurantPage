@@ -7,6 +7,10 @@ import {loadContact} from "./contact";
 const mainContent = document.createElement("div");
 mainContent.classList.add("main-content");
 
+const backgroundImage = document.createElement("img");
+backgroundImage.src = "../images/background.jpeg";
+backgroundImage.id = "background-image";
+
 // use constants for tab ids
 const HOME = 'home';
 const MENU = 'menu';
@@ -42,6 +46,7 @@ function loadPage() {
 
     page.appendChild(createHeader());
     page.appendChild(mainContent);
+    page.appendChild(backgroundImage);
 }
 
 /**
