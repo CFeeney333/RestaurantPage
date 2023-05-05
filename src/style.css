@@ -82,6 +82,7 @@ table {
     align-items: center;
     width: 70%;
     height: 100vh;
+    padding-top: 8em;
 }
 
 #logo {
@@ -105,6 +106,7 @@ table {
     display: flex;
     height: 6em;
     width: 100%;
+    position: fixed;
 }
 
 .home-content {
