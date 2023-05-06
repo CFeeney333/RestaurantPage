@@ -56,10 +56,35 @@ function createHome() {
     steakSection.appendChild(steakImg);
 
 
+    const fishSection = document.createElement("div");
+    fishSection.classList.add("section");
+
+    const fishImg = document.createElement("img");
+    fishImg.src = "../images/tuna-steak.webp";
+    fishImg.classList.add("section-item");
+    fishImg.classList.add("section-img");
+
+    const fishDescription = document.createElement("div");
+    fishDescription.classList.add("section-item");
+
+    const fishHeading = document.createElement("h2");
+    fishHeading.textContent = "FRESH FISH SERVED DAILY";
+
+    const fishContent = document.createElement("p");
+    fishContent.textContent = "patrioque suas iuvaret vehicula fugit definitiones eripuit senectus vel constituto expetenda elit quo dui vestibulum ornatus non hac metus class convallis dissentiunt commodo sit adversarium reque hac affert fabulas adipisci sed ridiculus convallis error ex tractatos molestiae quaerendum donec tamquam volumus patrioque honestatis accumsan instructior verear lorem vituperata urbanitas fermentum inciderint tota augue wisi graeci utamur falli has debet prompta dicunt postea deterruisset eam autem faucibus leo curabitur mazim libris eum moderatius sumo quot iuvaret ligula aliquam quaerendum nullam eu blandit euismod graeco reformidans litora tale facilis porro elit nascetur tempor voluptatum autem urna dissentiunt placerat mus sodales per convenire";
+
+    fishDescription.appendChild(fishHeading);
+    fishDescription.appendChild(fishContent);
+
+    fishSection.appendChild(fishImg);
+    fishSection.appendChild(fishDescription);
+
+
     homeElement.appendChild(img);
     homeElement.appendChild(line);
     homeElement.appendChild(pizzaSection);
     homeElement.appendChild(steakSection);
+    homeElement.appendChild(fishSection);
 
     // homeElement.textContent = "HOME CONTENT";
     return homeElement;
