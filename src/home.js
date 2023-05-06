@@ -23,7 +23,7 @@ function createHome() {
     pizzaHeading.textContent = "HOMEMADE GOURMET PIZZA";
 
     const pizzaContent = document.createElement("p");
-    pizzaContent.textContent = "lorem ipsum dolor sit amet...";
+    pizzaContent.textContent = "movet posse noluisse te fabellas voluptaria sententiae sapientem deterruisset mel interpretaris fames dolor elit condimentum reque justo offendit habeo eloquentiam sed reformidans finibus nunc molestie nec tractatos alterum dapibus legere iaculis option esse aliquam adhuc mazim ipsum suas alterum atomorum ac ludus nascetur doctus pro turpis duo scripserit legere molestie";
 
     pizzaDescription.appendChild(pizzaHeading);
     pizzaDescription.appendChild(pizzaContent);
@@ -42,7 +42,7 @@ function createHome() {
     steakHeading.textContent = "CLASSIC TOMAHAWK STEAK";
 
     const steakContent = document.createElement("p");
-    steakContent.textContent = "lorem ipsum dolor sit amet...";
+    steakContent.textContent = "nisl molestiae nominavi consul ante audire etiam ubique quod deterruisset quaerendum cu purus civibus mauris augue maluisset fames delectus nobis ornatus vim morbi ultrices iaculis ac enim dico dolorum tortor corrumpit nostra sem aenean lectus efficitur accumsan ultrices per graece nonumy vidisse consectetuer nominavi himenaeos latine fames alia parturient ac";
 
     steakDescription.appendChild(steakHeading);
     steakDescription.appendChild(steakContent);
