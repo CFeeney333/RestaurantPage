@@ -53,6 +53,25 @@ table {
     border-spacing: 0;
 }
 
+body {
+    font-family: "bahnschrift";
+}
+
+h2 {
+    font-size: 1.25em;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: bolder;
+    margin: 1em;
+}
 
 /* CLASSES AND IDS */
 .tab-list {
@@ -116,6 +135,15 @@ table {
     margin: 20px;
 }
 
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+
 .section {
     box-sizing: border-box;
     display: flex;
@@ -160,8 +188,4 @@ body::-webkit-scrollbar {
 body {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
-}
-
-h1 {
-    margin: 4em;
 }
