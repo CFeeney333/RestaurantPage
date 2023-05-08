@@ -71,7 +71,7 @@ function createHome() {
     fishHeading.textContent = "FRESH FISH SERVED DAILY";
 
     const fishContent = document.createElement("p");
-    fishContent.textContent = "patrioque suas iuvaret vehicula fugit definitiones eripuit senectus vel constituto expetenda elit quo dui vestibulum ornatus non hac metus class convallis dissentiunt commodo sit adversarium reque hac affert fabulas adipisci sed ridiculus convallis error ex tractatos molestiae quaerendum donec tamquam volumus patrioque honestatis accumsan instructior verear lorem vituperata urbanitas fermentum inciderint tota augue wisi graeci utamur falli has debet prompta dicunt postea deterruisset eam autem faucibus leo curabitur mazim libris eum moderatius sumo quot iuvaret ligula aliquam quaerendum nullam eu blandit euismod graeco reformidans litora tale facilis porro elit nascetur tempor voluptatum autem urna dissentiunt placerat mus sodales per convenire";
+    fishContent.textContent = "etiam ridiculus aptent quem graeco solet tibique ornatus mucius alienum vituperatoribus movet recteque aliquet vocibus torquent minim delenit putent porttitor pericula ius sadipscing morbi expetendis reprimique dapibus sapien ceteros nisi mentitum habitant ei vitae autem iisque labores inimicus deserunt commune vivamus eloquentiam fusce option mus suscipiantur expetenda altera senserit dolorum";
 
     fishDescription.appendChild(fishHeading);
     fishDescription.appendChild(fishContent);
