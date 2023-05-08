@@ -86,7 +86,6 @@ function createHome() {
     homeElement.appendChild(steakSection);
     homeElement.appendChild(fishSection);
 
-    // homeElement.textContent = "HOME CONTENT";
     return homeElement;
 }
 
